@@ -142,11 +142,19 @@
                             android:id="@+id/textView13"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+                            android:layout_marginTop="20dp"
+>>>>>>> cd3c4ca (08/05/2022)
                             android:text="mili second"
                             android:textColor="@android:color/background_dark"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/a1"
+<<<<<<< HEAD
                             tools:layout_editor_absoluteY="159dp" />
+=======
+                            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+>>>>>>> cd3c4ca (08/05/2022)
 
                         <TextView
                             android:id="@+id/textView14"
@@ -164,11 +172,19 @@
                             android:id="@+id/textView12"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+<<<<<<< HEAD
+=======
+                            android:layout_marginTop="20dp"
+>>>>>>> cd3c4ca (08/05/2022)
                             android:text="Bytes"
                             android:textColor="@android:color/background_dark"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toEndOf="@+id/a2"
+<<<<<<< HEAD
                             tools:layout_editor_absoluteY="326dp" />
+=======
+                            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+>>>>>>> cd3c4ca (08/05/2022)
 
                         <TextView
                             android:id="@+id/textView15"

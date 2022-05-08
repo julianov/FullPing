@@ -1,12 +1,21 @@
 apply plugin: 'com.android.application'
 
 android {
+<<<<<<< HEAD
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.julian.fullping"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode 8
+=======
+    compileSdkVersion 30
+    defaultConfig {
+        applicationId "com.julian.fullping"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 10
+>>>>>>> cd3c4ca (08/05/2022)
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true

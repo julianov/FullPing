@@ -14,8 +14,13 @@
 
     <ImageView
         android:id="@+id/imageView"
+<<<<<<< HEAD
         android:layout_width="86dp"
         android:layout_height="88dp"
+=======
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+>>>>>>> cd3c4ca (08/05/2022)
         android:contentDescription="@string/nav_header_desc"
         android:paddingTop="@dimen/nav_header_vertical_spacing"
         app:srcCompat="@drawable/ping" />

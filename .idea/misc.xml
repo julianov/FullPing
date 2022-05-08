@@ -13,6 +13,12 @@
         <entry key="..\:/Users/julia/Documents/Programación/FullPing-master/app/src/main/res/layout/fragment_trace_route.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/julia/Documents/Programación/FullPing-master/app/src/main/res/layout/nav_header_main.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/julia/Documents/Programación/FullPing-master/app/src/main/res/layout/switch_item.xml" value="0.20416666666666666" />
+<<<<<<< HEAD
+=======
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_trace_route.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/nav_header_main.xml" value="0.5" />
+>>>>>>> cd3c4ca (08/05/2022)
       </map>
     </option>
   </component>
