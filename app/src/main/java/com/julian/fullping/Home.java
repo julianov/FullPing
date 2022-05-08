@@ -27,7 +27,7 @@ public class
 Home extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
-    const prueba
+    int prueba;
     private InterstitialAd mInterstitialAd;
     AdRequest adRequest;
 
