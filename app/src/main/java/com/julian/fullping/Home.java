@@ -23,6 +23,8 @@ import com.google.android.gms.ads.MobileAds;
 
 import java.util.Random;
 
+import android.app.Fragment;
+
 public class
 Home extends AppCompatActivity {
 

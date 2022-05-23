@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,13 +12,14 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
 import android.widget.Toast;
 
 import com.julian.fullping.BuildConfig;
 import com.julian.fullping.R;
+
+import android.app.Fragment;
 
 public class SlideshowFragment extends Fragment {
 
@@ -28,14 +30,14 @@ public class SlideshowFragment extends Fragment {
     @RequiresApi(api = Build.VERSION_CODES.M)
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SlideshowViewModel.class);
+        slideshowViewModel = ViewModelProviders.of((FragmentActivity) getActivity().getBaseContext()).get(SlideshowViewModel.class);
         View root = inflater.inflate(R.layout.fragment_slideshow, container, false);
-        slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
+
+       /* slideshowViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
             }
-        });
+        });*/
 
         compartir= (Button) root.findViewById(R.id.button3);
             compartir.setOnClickListener(new View.OnClickListener() {

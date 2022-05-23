@@ -1,5 +1,7 @@
 package com.julian.fullping.ui.home;
 
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
@@ -31,6 +33,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.julian.fullping.R;
+import com.julian.fullping.guardar_datos;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -43,7 +46,7 @@ public class HomeFragment extends Fragment {
 
 
     private TextView txt;
-    private Button btn;
+    private Button btn, save;
 
     EditText gethost;
     TextView maximo, minimo, promedio, visualizacion, pingvalue, paquetesenviados, paquetesperdidos;
@@ -137,6 +140,8 @@ public class HomeFragment extends Fragment {
                             timerHandler.postDelayed(timerRunnable, 0);
                             btn.setText("Stop");
                             gethost.getText().clear();
+                            save.setVisibility(View.VISIBLE);
+
                         }
                         else{
 
@@ -174,11 +179,34 @@ public class HomeFragment extends Fragment {
                 {
                     timerHandler.removeCallbacks(timerRunnable);
                     btn.setText("Ping");
+                    save.setVisibility(View.INVISIBLE);
                     visualizacion.setAlpha(0);
                     pingvalue.setAlpha(0);
                     average=0;
                     min=0;
                     max=0;
+                }
+            }
+        });
+
+        save = (Button) root.findViewById(R.id.button_save);
+        save.setVisibility(View.INVISIBLE);
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if(average!=0 && max!=0 &&min!=0 && enviados!=0){
+                    Bundle bundle = new Bundle();
+                    String myMessage = "Stackoverflow is cool!";
+                    bundle.putString("param1", myMessage );
+
+                    Fragment fragment2= new guardar_datos();
+                    fragment2.setArguments(bundle);
+                    FragmentManager fragmentManager= getFragmentManager();
+                    FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+                    fragmentTransaction.replace(R.id.nav_host_fragment,fragment2,"tag");
+                    fragmentTransaction.addToBackStack(null);
+                    fragmentTransaction.commit();
                 }
             }
         });
